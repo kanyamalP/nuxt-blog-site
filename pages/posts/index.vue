@@ -37,7 +37,11 @@
       </ul>
     </div>
     <div class="wrapper">
-      <div class="container">{{posts}}</div>
+      <div class="container">
+        <div v-for="(post, index) in posts" :key="index">
+          <n-link :to="post.path">{{ post.title }}</n-link>
+        </div>
+      </div>
       <SidebarComponent />
     </div>
 
