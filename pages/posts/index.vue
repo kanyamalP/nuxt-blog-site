@@ -1,43 +1,85 @@
 <template>
   <div>
-    <nuxt-link to="/">Home</nuxt-link>
-    <h2>Nuxt.js Blog</h2>
+    <HeaderComponent />
+    <div>
+      <div class="main-content">
+        <div class="main-photo">
+          <h1>2020年の投稿</h1>
+        </div>
+      </div>
 
-    <input id="search" v-model="q" placeholder="Search..." />
-
-    <ul>
-      <li v-for="article in posts" :key="article.slug">
-        <nuxt-link :to="article.path">{{ article.title }}</nuxt-link>
-      </li>
-    </ul>
+      <ul class="date-list">
+        <li>
+          <a href="/2020/08/">
+            <p>2020/08</p>
+          </a>
+        </li>
+        <li>
+          <a href="/2020/09/">
+            <p>2020/09</p>
+          </a>
+        </li>
+        <li>
+          <a href="/2020/10/">
+            <p>2020/10</p>
+          </a>
+        </li>
+        <li>
+          <a href="/2020/11/">
+            <p>2020/11</p>
+          </a>
+        </li>
+        <li>
+          <a href="/2020/12/">
+            <p>2020/12</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div class="container">{{posts}}</div>
+    </div>
+    <SidebarComponent />
+    <FooterComponent />
   </div>
 </template>
 
 <script>
+import HeaderComponent from "@/components/Organisms/header.vue";
+import FooterComponent from "@/components/Organisms/footer.vue";
+import SidebarComponent from "@/components/Organisms/sidebar.vue";
 export default {
+  components: {
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent,
+  },
   watchQuery: true,
-  async asyncData ({ $content, route }) {
-    const q = route.query.q
+  async asyncData({ $content, route }) {
+    const q = route.query.q;
 
-    let query = $content('posts', { deep: true })
-      .sortBy('date', 'desc')
+    let query = $content("posts", { deep: true }).sortBy("date", "desc");
 
     if (q) {
-      query = query.search(q)
+      query = query.search(q);
       // OR query = query.search('title', q)
     }
 
-    const posts = await query.fetch()
+    const posts = await query.fetch();
 
     return {
       q,
-      posts
-    }
+      posts,
+    };
   },
   watch: {
-    q () {
-      this.$router.replace({ query: this.q ? { q: this.q } : undefined }).catch(() => { })
-    }
-  }
-}
+    q() {
+      this.$router
+        .replace({ query: this.q ? { q: this.q } : undefined })
+        .catch(() => {});
+    },
+  },
+};
 </script>
+<style scoped lang="scss">
+</style>

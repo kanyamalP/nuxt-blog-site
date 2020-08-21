@@ -38,9 +38,7 @@
     </div>
     <div class="wrapper">
       <div class="container">
-        <!--main----------------------------->
         <div class="main">
-          <!--------------------------------------------->
           <div class="diary">
             <hr class="line-2020" />
             <div class="diary-content">
@@ -67,7 +65,7 @@
               </div>
             </div>
           </div>
-          <!------------------------------------------->
+
           <div class="diary">
             <hr class="line-2020" />
             <div class="diary-content">
@@ -103,9 +101,7 @@
               </div>
             </div>
           </div>
-          <!------------------------------------------->
 
-          <!------------------------------------------->
           <div class="diary">
             <hr class="line-2020" />
             <div class="diary-content">
@@ -300,251 +296,50 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.main-content {
+  background-image: url(/img/iroenpitu.jpeg);
+  background-size: cover;
+  height: 475px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  .main-photo h1 {
+    font-size: 40px;
+    padding-top: 190px;
+    font-family: auto;
+  }
+}
 .wrapper {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-}
-.container {
-  width: calc(100% - 370px);
-}
-
-// main.cssから全コピー
-
-/*index.html 2020*/
-
-.main-content {
-  background-image: url(/img/iroenpitu.jpeg);
-  background-size: cover;
-  height: 475px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-
-.main-photo h1 {
-  font-size: 40px;
-  padding-top: 190px;
-  font-family: auto;
+  .container {
+    width: calc(100% - 370px);
+  }
 }
 
 .date-list {
   list-style: none;
   display: flex;
+  li {
+    padding: 0 6% 0 6%;
+  }
+  li:hover,
+  .choosed {
+    border-top: solid 10px #ff7d6e;
+  }
+  p {
+    color: #4766ffad;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
 }
-
-.date-list li {
-  padding: 0 6% 0 6%;
-}
-
-.date-list li:hover,
-.choosed {
-  border-top: solid 10px #ff7d6e;
-}
-
-.date-list p {
-  color: #4766ffad;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.date-list a {
-  text-decoration: none;
-}
-/*.diary{
-    text-align: center;
-}*/
 hr.line-2020 {
   border: none;
   border-top: dashed 1px #ff0000;
   height: 1px;
-  /* padding: 30px 0;*/
-}
-
-/*index.html 月*/
-
-/*.date-list a:visited {
-    background-color: tomato;
-}*/
-
-/*index.html 日*/
-
-.dairy-main {
-  display: flex;
-}
-
-.diary-comment-main {
-  padding: 0 80px;
-}
-
-.diary-content-today {
-  margin-bottom: 50px;
-  width: 900px;
-  padding-top: 100px;
-}
-
-.indent {
-  padding: 30px 0;
-  margin: 0;
-}
-
-.page-link {
-  display: flex;
-  margin: 50px 0 80px 0;
-}
-.page-link a {
-  color: tomato;
-}
-
-.page-link a:hover {
-  opacity: 0.5;
-}
-
-.back {
-  position: absolute;
-  left: 30%;
-}
-
-.top {
-  margin: auto;
-}
-/*.next{
-    position: absolute;
-    right: 30%;
-}*/
-
-/*----サイドバー----------*/
-.sidebar {
-  background-color: wheat;
-  width: 370px;
-  padding-top: 150;
-}
-
-.sidebar-img {
-  height: 333px;
-  width: 250px;
-}
-
-.sidebar-profile {
-  padding-top: 100px;
-}
-
-// サブから全コピー
-
-/*index.html 2020*/
-
-.main-content {
-  background-image: url(/img/iroenpitu.jpeg);
-  background-size: cover;
-  height: 475px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-
-.main-photo h1 {
-  font-size: 40px;
-  padding-top: 190px;
-  font-family: auto;
-}
-
-.date-list {
-  list-style: none;
-  display: flex;
-}
-
-.date-list li {
-  padding: 0 6% 0 6%;
-}
-
-.date-list li:hover,
-.choosed {
-  border-top: solid 10px #ff7d6e;
-}
-
-.date-list p {
-  color: #4766ffad;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.date-list a {
-  text-decoration: none;
-}
-/*.diary{
-    text-align: center;
-}*/
-hr.line-2020 {
-  border: none;
-  border-top: dashed 1px #ff0000;
-  height: 1px;
-  /* padding: 30px 0;*/
-}
-
-/*index.html 月*/
-
-/*.date-list a:visited {
-    background-color: tomato;
-}*/
-
-/*index.html 日*/
-
-.dairy-main {
-  display: flex;
-}
-
-.diary-comment-main {
-  padding: 0 80px;
-}
-
-.diary-content-today {
-  margin-bottom: 50px;
-  width: 900px;
-  padding-top: 100px;
-}
-
-.indent {
-  padding: 30px 0;
-  margin: 0;
-}
-
-.page-link {
-  display: flex;
-  margin: 50px 0 80px 0;
-}
-.page-link a {
-  color: tomato;
-}
-
-.page-link a:hover {
-  opacity: 0.5;
-}
-
-.back {
-  position: absolute;
-  left: 30%;
-}
-
-.top {
-  margin: auto;
-}
-/*.next{
-    position: absolute;
-    right: 30%;
-}*/
-
-/*----サイドバー----------*/
-.sidebar {
-  background-color: wheat;
-  width: 370px;
-  padding-top: 150;
-}
-
-.sidebar-img {
-  height: 333px;
-  width: 250px;
-}
-
-.sidebar-profile {
-  padding-top: 100px;
 }
 </style>
