@@ -7,8 +7,9 @@
     "lint": "eslint --ext .ts,.js,.vue ."
   },
   "dependencies": {
+    "@nuxt/content": "^1.6.1",
     "@nuxt/typescript-runtime": "latest",
-    "nuxt": "latest"
+    "nuxt": "^2.14.3"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "latest",

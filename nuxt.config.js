@@ -1,4 +1,7 @@
 export default {
+  modules: [
+    '@nuxt/content'
+  ],
   buildModules: [
     ['@nuxt/typescript-build', {
       typeCheck: true,
