@@ -1,13 +1,13 @@
 <template>
   <header>
     <div class="header">
-      <a class="logo" href="/">
-        <p>Kanap</p>
-        <p>&nbsp;&nbsp;&nbsp;Blog</p>
-      </a>
-      <a href="https://twitter.com/kanyamalP">
+      <n-link class="logo" to="/">
+        <p>Kanap Blog</p>
+      </n-link>
+      <!-- <a href="https://twitter.com/kanyamalP">
         <img class="twitter-logo" src="/img/twitter-logo.png" />
-      </a>
+      </a>-->
+      <n-link to="/posts" style="float:right">posts</n-link>
     </div>
   </header>
 </template>
