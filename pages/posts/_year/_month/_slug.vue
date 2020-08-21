@@ -10,29 +10,29 @@
 
       <ul class="date-list">
         <li>
-          <a href="/2020/08/">
-            <p>2020/08</p>
-          </a>
+          <n-link to="/posts/2020/8/">
+            <p>2020/8</p>
+          </n-link>
         </li>
         <li>
-          <a href="/2020/09/">
-            <p>2020/09</p>
-          </a>
+          <n-link to="/posts/2020/9/">
+            <p>2020/9</p>
+          </n-link>
         </li>
         <li>
-          <a href="/2020/10/">
+          <n-link to="/posts/2020/10/">
             <p>2020/10</p>
-          </a>
+          </n-link>
         </li>
         <li>
-          <a href="/2020/11/">
+          <n-link to="/posts/2020/11/">
             <p>2020/11</p>
-          </a>
+          </n-link>
         </li>
         <li>
-          <a href="/2020/12/">
+          <n-link to="/posts/2020/12/">
             <p>2020/12</p>
-          </a>
+          </n-link>
         </li>
       </ul>
     </div>
